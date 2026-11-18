@@ -13,8 +13,8 @@ namespace Baibaocao.net.Model.Entity
         public int PublishYear { get; set; }
         public int PublisherID { get; set; }
         public Publisher Publisher { get; set; }
-        public ICollection<BookAuthor> BooksAuthors { get; set; }
-        public ICollection<BookCategory> BookCategories { get; set; }
+        public ICollection<BookAuthor> BooksAuthors { get; set; } = new List<BookAuthor>();
+        public ICollection<BookCategory> BookCategories { get; set; } = new List<BookCategory>();
 
     }
 }
