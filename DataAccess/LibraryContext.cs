@@ -14,6 +14,8 @@ namespace Baibaocao.net.DataAccess
         public DbSet<Category>Categories { get; set; }
         public DbSet<BookAuthor> BookAuthors { get; set; }
         public DbSet<BookCategory> BookCategories {  get; set; }
+        public DbSet<Reader> Readers { get; set; }
+        public DbSet<Account> Accounts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -27,6 +29,8 @@ namespace Baibaocao.net.DataAccess
             modelBuilder.Entity<Category>().ToTable("category");
             modelBuilder.Entity<BookAuthor>().ToTable("bookauthor");
             modelBuilder.Entity<BookCategory>().ToTable("bookcategory");
+            modelBuilder.Entity<Reader>().ToTable("reader");
+            modelBuilder.Entity<Account>().ToTable("account");
 
             modelBuilder.Entity<Book>().HasOne(b => b.Publisher).WithMany(p => p.Books).HasForeignKey(b => b.PublisherID);
 

@@ -1,0 +1,5 @@
+# File tam cua Visual Studio va ket qua build - khong dua len GitHub
+.vs/
+bin/
+obj/
+*.user

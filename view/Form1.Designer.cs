@@ -36,6 +36,7 @@
             btnSua = new Button();
             btnThem = new Button();
             tabPage2 = new TabPage();
+            readerControl1 = new ReaderControl();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
             tabControl1.SuspendLayout();
@@ -266,13 +267,19 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(readerControl1);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(789, 418);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
+            tabPage2.Text = "Quản lý độc giả";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // readerControl1
+            // 
+            readerControl1.Dock = DockStyle.Fill;
+            readerControl1.Name = "readerControl1";
             // 
             // tabPage3
             // 
@@ -338,6 +345,7 @@
         private Button btnSua;
         private Button btnThem;
         private TabPage tabPage2;
+        private ReaderControl readerControl1;
         private TabPage tabPage3;
         private TabPage tabPage4;
     }
