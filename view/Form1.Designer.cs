@@ -12,13 +12,9 @@
 
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            btnXoa = new Button();
-            btnSua = new Button();
-            btnThem = new Button();
-            panel2 = new Panel();
-            txtTimKiem = new TextBox();
-            btnTimKiem = new Button();
+            tabControl1 = new TabControl();
+            tabPage1 = new TabPage();
+            dgvBooks = new DataGridView();
             panel3 = new Panel();
             txtGhiChu = new TextBox();
             cboTacGia = new ComboBox();
@@ -32,76 +28,57 @@
             label2 = new Label();
             txtTenSach = new TextBox();
             label1 = new Label();
-            dgvBooks = new DataGridView();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
+            panel2 = new Panel();
+            txtTimKiem = new TextBox();
+            btnTimKiem = new Button();
+            panel1 = new Panel();
+            btnXoa = new Button();
+            btnSua = new Button();
+            btnThem = new Button();
+            tabPage2 = new TabPage();
+            tabPage3 = new TabPage();
+            tabPage4 = new TabPage();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBooks).BeginInit();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // tabControl1
             // 
-            panel1.BackColor = SystemColors.ActiveCaption;
-            panel1.Controls.Add(btnXoa);
-            panel1.Controls.Add(btnSua);
-            panel1.Controls.Add(btnThem);
-            panel1.Location = new Point(16, 19);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(510, 78);
-            panel1.TabIndex = 3;
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage3);
+            tabControl1.Controls.Add(tabPage4);
+            tabControl1.Location = new Point(2, 3);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(797, 446);
+            tabControl1.TabIndex = 0;
             // 
-            // btnXoa
+            // tabPage1
             // 
-            btnXoa.Location = new Point(365, 22);
-            btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(105, 40);
-            btnXoa.TabIndex = 0;
-            btnXoa.Text = "Xóa";
-            btnXoa.UseVisualStyleBackColor = true;
+            tabPage1.Controls.Add(dgvBooks);
+            tabPage1.Controls.Add(panel3);
+            tabPage1.Controls.Add(panel2);
+            tabPage1.Controls.Add(panel1);
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(789, 418);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "tabPage1";
+            tabPage1.UseVisualStyleBackColor = true;
             // 
-            // btnSua
+            // dgvBooks
             // 
-            btnSua.Location = new Point(197, 22);
-            btnSua.Name = "btnSua";
-            btnSua.Size = new Size(105, 40);
-            btnSua.TabIndex = 1;
-            btnSua.Text = "Sửa";
-            btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnThem
-            // 
-            btnThem.Location = new Point(27, 22);
-            btnThem.Name = "btnThem";
-            btnThem.Size = new Size(105, 40);
-            btnThem.TabIndex = 2;
-            btnThem.Text = "Thêm";
-            btnThem.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.GradientInactiveCaption;
-            panel2.Controls.Add(txtTimKiem);
-            panel2.Controls.Add(btnTimKiem);
-            panel2.Location = new Point(545, 19);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(240, 78);
-            panel2.TabIndex = 2;
-            // 
-            // txtTimKiem
-            // 
-            txtTimKiem.Location = new Point(13, 33);
-            txtTimKiem.Name = "txtTimKiem";
-            txtTimKiem.Size = new Size(148, 23);
-            txtTimKiem.TabIndex = 0;
-            // 
-            // btnTimKiem
-            // 
-            btnTimKiem.Location = new Point(167, 24);
-            btnTimKiem.Name = "btnTimKiem";
-            btnTimKiem.Size = new Size(70, 38);
-            btnTimKiem.TabIndex = 1;
-            btnTimKiem.Text = "Tìm kiếm";
-            btnTimKiem.UseVisualStyleBackColor = true;
+            dgvBooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvBooks.Location = new Point(7, 103);
+            dgvBooks.Name = "dgvBooks";
+            dgvBooks.Size = new Size(510, 314);
+            dgvBooks.TabIndex = 4;
             // 
             // panel3
             // 
@@ -118,10 +95,10 @@
             panel3.Controls.Add(label2);
             panel3.Controls.Add(txtTenSach);
             panel3.Controls.Add(label1);
-            panel3.Location = new Point(547, 120);
+            panel3.Location = new Point(538, 103);
             panel3.Name = "panel3";
             panel3.Size = new Size(243, 314);
-            panel3.TabIndex = 1;
+            panel3.TabIndex = 5;
             // 
             // txtGhiChu
             // 
@@ -223,40 +200,145 @@
             label1.TabIndex = 11;
             label1.Text = "Tên sách";
             // 
-            // dgvBooks
+            // panel2
             // 
-            dgvBooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvBooks.Location = new Point(16, 120);
-            dgvBooks.Name = "dgvBooks";
-            dgvBooks.Size = new Size(510, 314);
-            dgvBooks.TabIndex = 0;
+            panel2.BackColor = SystemColors.GradientInactiveCaption;
+            panel2.Controls.Add(txtTimKiem);
+            panel2.Controls.Add(btnTimKiem);
+            panel2.Location = new Point(536, 2);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(240, 78);
+            panel2.TabIndex = 6;
+            // 
+            // txtTimKiem
+            // 
+            txtTimKiem.Location = new Point(13, 33);
+            txtTimKiem.Name = "txtTimKiem";
+            txtTimKiem.Size = new Size(148, 23);
+            txtTimKiem.TabIndex = 0;
+            // 
+            // btnTimKiem
+            // 
+            btnTimKiem.Location = new Point(167, 24);
+            btnTimKiem.Name = "btnTimKiem";
+            btnTimKiem.Size = new Size(70, 38);
+            btnTimKiem.TabIndex = 1;
+            btnTimKiem.Text = "Tìm kiếm";
+            btnTimKiem.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.Controls.Add(btnXoa);
+            panel1.Controls.Add(btnSua);
+            panel1.Controls.Add(btnThem);
+            panel1.Location = new Point(7, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(510, 78);
+            panel1.TabIndex = 7;
+            // 
+            // btnXoa
+            // 
+            btnXoa.Location = new Point(365, 22);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(105, 40);
+            btnXoa.TabIndex = 0;
+            btnXoa.Text = "Xóa";
+            btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // btnSua
+            // 
+            btnSua.Location = new Point(197, 22);
+            btnSua.Name = "btnSua";
+            btnSua.Size = new Size(105, 40);
+            btnSua.TabIndex = 1;
+            btnSua.Text = "Sửa";
+            btnSua.UseVisualStyleBackColor = true;
+            // 
+            // btnThem
+            // 
+            btnThem.Location = new Point(27, 22);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(105, 40);
+            btnThem.TabIndex = 2;
+            btnThem.Text = "Thêm";
+            btnThem.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(789, 418);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "tabPage2";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(3);
+            tabPage3.Size = new Size(789, 418);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "tabPage3";
+            tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            tabPage4.Location = new Point(4, 24);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(789, 418);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "tabPage4";
+            tabPage4.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(800, 461);
-            Controls.Add(dgvBooks);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(tabControl1);
             MinimumSize = new Size(816, 489);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvBooks).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvBooks).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
-        private Panel panel1, panel2, panel3;
-        private Button btnThem, btnSua, btnXoa, btnTimKiem;
-        private TextBox txtTimKiem, txtTenSach, txtNamSX, txtGhiChu;
-        private ComboBox cboNXB, cboTheLoai, cboTacGia;
-        private Label label1, label2, label3, label4, label5, label6;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
         private DataGridView dgvBooks;
+        private Panel panel3;
+        private TextBox txtGhiChu;
+        private ComboBox cboTacGia;
+        private ComboBox cboTheLoai;
+        private ComboBox cboNXB;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private TextBox txtNamSX;
+        private Label label2;
+        private TextBox txtTenSach;
+        private Label label1;
+        private Panel panel2;
+        private TextBox txtTimKiem;
+        private Button btnTimKiem;
+        private Panel panel1;
+        private Button btnXoa;
+        private Button btnSua;
+        private Button btnThem;
+        private TabPage tabPage2;
+        private TabPage tabPage3;
+        private TabPage tabPage4;
     }
 }

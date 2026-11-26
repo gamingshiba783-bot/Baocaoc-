@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Baibaocao.net")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16b5a49b766a19b575546dda6a416bff11717eff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99e83af4c3469dd4d8633a19d740bcae6d1d6bb6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Baibaocao.net")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Baibaocao.net")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
