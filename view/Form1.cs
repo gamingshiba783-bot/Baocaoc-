@@ -25,6 +25,16 @@ namespace Baibaocao.net
             btnThem.Click += btnThem_Click;
             btnSua.Click += btnSua_Click;
             btnXoa.Click += btnXoa_Click;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
+        }
+        private void tabControl1_SelectedIndexChanged(object? sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabPage2)
+                loanControl1.RefreshData();
+            else if (tabControl1.SelectedTab == tabPage3)
+                bookStatusControl1.RefreshData();
+            else if (tabControl1.SelectedTab == tabPage4)
+                catalogControl1.RefreshData();
         }
         private void Form1_Load(object sender, EventArgs e)
         {

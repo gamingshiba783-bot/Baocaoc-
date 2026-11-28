@@ -10,6 +10,6 @@ namespace Baibaocao.net.DataAccess
     public static class DbConnection
     {
         public const string connectionString =
-            "Server=localhost;Port=3306;Database=library;User ID=root;Password=123456;";
+            "Server=localhost;Port=3306;Database=librarys;User ID=root;Password=123456;";
     }
 }

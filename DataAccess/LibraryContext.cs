@@ -14,6 +14,10 @@ namespace Baibaocao.net.DataAccess
         public DbSet<Category>Categories { get; set; }
         public DbSet<BookAuthor> BookAuthors { get; set; }
         public DbSet<BookCategory> BookCategories {  get; set; }
+        public DbSet<Reader> Readers { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Loan> Loans { get; set; }
+        public DbSet<LoanDetail> LoanDetails { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -27,6 +31,11 @@ namespace Baibaocao.net.DataAccess
             modelBuilder.Entity<Category>().ToTable("category");
             modelBuilder.Entity<BookAuthor>().ToTable("bookauthor");
             modelBuilder.Entity<BookCategory>().ToTable("bookcategory");
+            modelBuilder.Entity<Reader>().ToTable("reader");
+            modelBuilder.Entity<Employee>().ToTable("employee");
+            modelBuilder.Entity<Loan>().ToTable("loan");
+            modelBuilder.Entity<Loan>().HasOne(l => l.Employee).WithMany(e => e.Loans).HasForeignKey(l => l.EmployeeID);
+            modelBuilder.Entity<LoanDetail>().ToTable("loandetail");
 
             modelBuilder.Entity<Book>().HasOne(b => b.Publisher).WithMany(p => p.Books).HasForeignKey(b => b.PublisherID);
 
@@ -35,6 +44,11 @@ namespace Baibaocao.net.DataAccess
 
             modelBuilder.Entity<BookCategory>().HasOne(x => x.Book).WithMany(b => b.BookCategories).HasForeignKey(x => x.BookID);
             modelBuilder.Entity<BookCategory>().HasOne(x => x.Category).WithMany(c => c.bookCategories).HasForeignKey(x => x.CategoryID);
+
+            modelBuilder.Entity<Loan>().HasOne(l => l.Reader).WithMany(r => r.Loans).HasForeignKey(l => l.ReaderID);
+            modelBuilder.Entity<LoanDetail>().HasOne(ld => ld.Loan).WithMany(l => l.LoanDetails).HasForeignKey(ld => ld.LoanID);
+            modelBuilder.Entity<LoanDetail>().HasOne(ld => ld.Book).WithMany().HasForeignKey(ld => ld.BookID);
+            modelBuilder.Entity<LoanDetail>().HasOne(ld => ld.Returner).WithMany().HasForeignKey(ld => ld.ReturnedBy);
 
             modelBuilder.Entity<Book>().Ignore(b => b.Bookname);
         }
